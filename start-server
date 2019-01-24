@@ -1,0 +1,3 @@
+#!/bin/bash
+
+minetestserver --terminal --gameid minetest --worldname salvador --config minetest.conf
