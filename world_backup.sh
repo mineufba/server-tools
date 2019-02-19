@@ -6,15 +6,24 @@ fileName="$1$DATE"".zip"
 
 lastBackup=`ls $1 -t | head -n1`
 
-zip -r $fileName $2
+cd $2
+
+zip -r $fileName ./*
 
 if [ ! -z "${lastBackup// }" ]; then
 
 	lastBackup="$1""$lastBackup"
 			
-	if [ `diff -q $fileName $lastBackup`=="" ]; then
+#	echo $fileName
+#	echo $lastBackup
+
+	diffOutput=`diff -q "$fileName" "$lastBackup"`
+
+#	echo "$diffOutput"
+
+	if [ -z "$diffOutput" ]; then
 
 	        rm -f $fileName
 	fi
 
-fi 	
+fi 
