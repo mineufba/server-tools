@@ -1,3 +1,3 @@
 #!/bin/bash
 
-minetestserver --terminal --gameid minetest --worldname salvador --config minetest.conf
+minetestserver --terminal --gameid minetest --worldname salvador --config /home/ubuntu/minetest_server_tools/minetest.conf

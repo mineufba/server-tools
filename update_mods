@@ -2,4 +2,6 @@
 
 pushd /root/.minetest/mods/minetest-mods/
 git pull
+git submodule init
+git submodule update
 popd
